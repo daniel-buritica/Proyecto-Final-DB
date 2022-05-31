@@ -1,0 +1,13 @@
+.container{
+display: grid;
+grid-template-columns: 25% 75%;
+
+width: 100;
+
+padding: 15FR;
+}
+
+.caja{
+    margin: 15px;
+}
+

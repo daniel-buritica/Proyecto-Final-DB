@@ -1,0 +1,64 @@
+<app-header></app-header>
+
+<div class="container">
+
+    <form [formGroup]="editarForm" (ngSubmit)="postForm(editarForm.value)">
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Nombre</label><br>
+            <input type="text" class="form-control" placeholder="Nombre del Paciente" formControlName = "nombre">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Apellido</label><br>
+            <input type="text" class="form-control" placeholder="Apellido del Paciente" formControlName = "apellido">
+        </div>
+        <div class="form-group row">
+            <div class="col">
+                <label for="exampleFormControlInput1">Cédula</label><br>
+                <input type="text" class="form-control" placeholder="Cédula del Paciente" formControlName = "cedula">
+            </div>
+            <div class="col">
+                <label for="exampleFormControlInput1">Telefono</label><br>
+                <input type="text" class="form-control" placeholder="Telefono del Paciente" formControlName = "telefono">
+            </div>
+        </div>    
+        <div class="form-group row">    
+            <div class="col">
+                <label for="exampleFormControlInput1">Correo</label><br>
+                <input type="text" class="form-control" placeholder="Correo del Paciente" formControlName = "correo">
+            </div>
+            <div class="col">
+                <label for="exampleFormControlInput1">Dirrección</label><br>
+                <input type="text" class="form-control" placeholder="Dirrección del Paciente" formControlName = "direccion">
+            </div>
+        </div> 
+        <div class="form-group row">
+            <div class="col">
+                <label for="exampleFormControlInput1">Fecha Registro</label><br>
+                <input type="text" class="form-control" placeholder="Fecha de registro" formControlName = "fecha_registro">
+            </div>
+            <div class="col">
+                <label for="exampleFormControlInput1">Fecha Cita</label><br>
+                <input type="text" class="form-control" placeholder="Fecha Cita" formControlName = "fecha_cita">
+            </div>
+        </div>    
+        <div class="form-group row">    
+            <div class="col">
+                <label for="exampleFormControlInput1">Tipo</label><br>
+                <input type="text" class="form-control" placeholder="Tipo de cita" formControlName = "tipo">
+            </div>
+            <div class="col">
+                <label for="exampleFormControlInput1">Estado</label><br>
+                <input type="text" class="form-control" placeholder="Estado Cita" formControlName = "estado">
+            </div>
+        </div> 
+        <br><br>
+        <button type="submit" class="btn btn-primary">Guardar </button>
+        <button type="button" class="btn btn-danger" (click)="eliminar()" >Eliminar</button>
+        <button type="button" class="btn btn-dark" (click)="salir()" >Salir</button>
+    </form>
+    
+
+</div>
+
+<app-footer></app-footer>
+

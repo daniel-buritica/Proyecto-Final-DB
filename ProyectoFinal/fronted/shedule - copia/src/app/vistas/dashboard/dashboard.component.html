@@ -1,0 +1,50 @@
+<app-header></app-header>
+
+
+<div class="container">
+  <div class="caja">
+    <app-nuevo></app-nuevo>
+  </div>
+  <div class="caja">
+     
+    <h3>Lista de Citas</h3><br>    
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">Cédula</th>
+          <th scope="col">Telefono</th>
+          <th scope="col">Correo</th>
+          <th scope="col">Dirección</th>
+          <th scope="col">Fecha Registro</th>
+          <th scope="col">Fecha Cita</th>
+          <th scope="col">Tipo</th>
+          <th scope="col">Estado</th>
+        </tr>
+      </thead>
+      <tbody class="thead-ligth">
+        <tr *ngFor="let paciente of pacientes" (click)="editarCita(paciente.id)">
+          <th scope="row">{{paciente.id}}</th>
+          <td>{{paciente.nombre}}</td>
+          <td>{{paciente.apellido}}</td>
+          <td>{{paciente.cedula}}</td>
+          <td>{{paciente.telefono}}</td>
+          <td>{{paciente.correo}}</td>
+          <td>{{paciente.direccion}}</td>
+          <td>{{paciente.fecha_registro}}</td>
+          <td>{{paciente.fecha_cita}}</td>
+          <td>{{paciente.tipo}}</td>
+          <td>{{paciente.estado}}</td>
+        </tr>
+      </tbody>
+    </table>     
+  </div>
+     
+
+    </div>
+
+
+
+<app-footer></app-footer>
